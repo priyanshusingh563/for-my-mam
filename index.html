@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gift for Mam</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow: hidden;
+      height: 100vh;
+      background: linear-gradient(135deg, #fce3ec, #a9c9ff, #fcb1fc, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientFlow 20s ease infinite;
+      font-family: 'Pacifico', cursive;
+      position: relative;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glow-text {
+      position: absolute;
+      top: 50px;
+      width: 100%;
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff1493;
+      animation: glow 2s ease-in-out infinite;
+      z-index: 10;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff69b4; }
+      50% { text-shadow: 0 0 25px #00ffff, 0 0 50px #ff1493; }
+      100% { text-shadow: 0 0 10px #ff69b4; }
+    }
+
+    .butterfly {
+      position: absolute;
+      font-size: 30px;
+      animation: realFly 12s infinite ease-in-out;
+    }
+
+    @keyframes realFly {
+      0%   { transform: translate(0, 100vh) rotate(0deg); }
+      25%  { transform: translate(20vw, 70vh) rotate(30deg); }
+      50%  { transform: translate(40vw, 40vh) rotate(-20deg); }
+      75%  { transform: translate(70vw, 20vh) rotate(60deg); }
+      100% { transform: translate(100vw, -10vh) rotate(360deg); }
+    }
+
+    .butterfly:nth-child(2) { left: 0%; animation-delay: 0s; }
+    .butterfly:nth-child(3) { left: 20%; animation-delay: 2s; }
+    .butterfly:nth-child(4) { left: 40%; animation-delay: 4s; }
+    .butterfly:nth-child(5) { left: 60%; animation-delay: 6s; }
+
+    .heart {
+      position: absolute;
+      top: -50px;
+      font-size: 25px;
+      animation: fall 8s linear infinite;
+      color: #ff1493;
+      opacity: 0.6;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(110vh) rotate(360deg); }
+    }
+
+    .heart:nth-child(6) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(7) { left: 30%; animation-delay: 1s; }
+    .heart:nth-child(8) { left: 50%; animation-delay: 2s; }
+    .heart:nth-child(9) { left: 70%; animation-delay: 3s; }
+    .heart:nth-child(10){ left: 90%; animation-delay: 4s; }
+
+    .bouquet {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 80px;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_3841b0bfa1.mp3?filename=relaxing-melody-11766.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Glowing Name / Message -->
+  <div class="glow-text">💖 For Our Dearest Mam 💖</div>
+
+  <!-- Flying Butterflies -->
+  <div class="butterfly">🦋</div>
+  <div class="butterfly">🦋</div>
+  <div class="butterfly">🦋</div>
+  <div class="butterfly">🦋</div>
+
+  <!-- Falling Hearts -->
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+
+  <!-- Guldasta at Bottom -->
+  <div class="bouquet">💐</div>
+
+</body>
+</html>
